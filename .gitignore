@@ -86,3 +86,4 @@ __pycache__
 *.yml
 *.csv
 /config.yml
+teams_submissions/
