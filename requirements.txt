@@ -1,18 +1,16 @@
-numpy==1.24.2
-matplotlib==3.7.1
-scipy==1.10.1
-pandas==2.0.0
-scikit-learn==1.2.2
-seaborn==0.12.2
-notebook==6.5.4
+numpy==1.26.4
+matplotlib==3.8.4
+scipy==1.13.0
+pandas==2.2.0
+scikit-learn==1.4.2
+seaborn==0.13.2
+notebook==7.1.3
 bson==0.5.10
-pymongo==4.3.3
-PyYAML==6.0
-tqdm==4.65.0
-ipywidgets==8.0.6
-tensorflow==2.12.0.0; sys_platform == 'linux'
-tensorflow==2.12.0; sys_platform == 'linux2'
-tensorflow-macos==2.12.0; sys_platform == 'darwin'
-tensorflow-metal==0.8.0; sys_platform == 'darwin'
+pymongo==4.6.3
+pyyaml==6.0.1
+tqdm==4.66.2
+ipywidgets==8.1.2
+tensorflow==2.14.0
+tensorflow-metal==1.1.0; platform_system=='Darwin'
 psynlig==0.2.2.dev0
-pydot==1.4.2
+pydot==2.0.0

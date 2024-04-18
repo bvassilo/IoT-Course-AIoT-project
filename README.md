@@ -230,10 +230,11 @@ Communications (BIGCOM), 2018.
 
 Dr. Pantelis Tzamalis
 * email: [tzamalis@ceid.upatras.gr](mailto:tzamalis@ceid.upatras.gr)
+* * GitHub: https://github.com/tzamalisp
 * Website: https://tzamalisp.github.io
 * Social: https://www.linkedin.com/in/pantelis-tzamalis/
-* GitHub: https://github.com/tzamalisp
 
-Ph.D. Panagiotis Kapetanidis
-* email: [pkapetanidis@gmail.com](mailto:pkapetanidis@gmail.com)
-* GitHub: https://github.com/CaptainAlready
+Ph.D. George Kontogiannis
+* email: [george.k.kontogiannis@gmail.com](mailto:george.k.kontogiannis@gmail.com)
+* GitHub: https://github.com/gkontogiannhs
+* Social: https://www.linkedin.com/in/george-kontogiannis/
