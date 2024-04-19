@@ -223,8 +223,8 @@ Communications (BIGCOM), 2018.
 
 ## Important Notes
 
-* Anouncement date: 02 May, 2023 
-* Delivery Date: 02 June, 2023
+* Anouncement date: 26 April, 2024 
+* Delivery Date: DD Month, 2024
 
 ## Contact
 
