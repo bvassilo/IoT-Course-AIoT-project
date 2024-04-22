@@ -247,13 +247,13 @@ Communications (BIGCOM), 2018.
 
 ## Contact
 
-Dr. Pantelis Tzamalis
+Dr. Pantelis Tzamalis, *Engineering Manager*
 * email: [tzamalis@ceid.upatras.gr](mailto:tzamalis@ceid.upatras.gr)
 * GitHub: [https://github.com/tzamalisp](https://github.com/tzamalisp)
 * Website: [https://tzamalisp.github.io)](https://tzamalisp.github.io)
 * Social: [https://www.linkedin.com/in/pantelis-tzamalis/](https://www.linkedin.com/in/pantelis-tzamalis/)
 
-Ph.D. George Kontogiannis
+George Kontogiannis, *Ph.D. Candidate*
 * email: [george.k.kontogiannis@gmail.com](mailto:george.k.kontogiannis@gmail.com)
 * GitHub: [https://github.com/gkontogiannhs](https://github.com/gkontogiannhs)
 * Social: [https://www.linkedin.com/in/george-kontogiannis/](https://www.linkedin.com/in/george-kontogiannis/)
