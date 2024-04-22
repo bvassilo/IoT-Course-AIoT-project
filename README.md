@@ -6,6 +6,30 @@ This is a repository that contains the demonstration of the Human Gesture Recogn
 part of the course "Algorithmic Foundations of Sensor Networks" in the Computer Engineering and Informatics Department, 
 University of Patras.
 
+If you are interested in the project, please, send an email to: [tzamalis@ceid.upatras.gr](mailto:tzamalis@ceid.upatras.gr) 
+where you include:
+
+1. First Name
+2. Last Name
+3. email
+4. GitHub account username
+5. phone number
+
+and you will receive a response mail for the date and time when you can get the wearable device from the IoT Lab:
+
+* 1st floor, new building of Computer Engineering and Informatics Department, University of Patras.
+* Pantelis Tzamalis: [https://tzamalisp.github.io/](https://tzamalisp.github.io/)
+* George Kontogiannis: [https://github.com/gkontogiannhs](https://github.com/gkontogiannhs)
+
+
+## Important Notes
+
+* A team of **2 students** is mandatory for each project
+* Announcement date: **24 April, 2024** 
+* Delivery Date: **20 June, 2024, 11:59PM**
+* Grade: **4**, Bonus section: +1
+
+
 ## Project Description
 
 In this project, you are prompted to create an end-to-end Artificial Intelligence of Things (AIoT) procedure in order 
@@ -46,6 +70,12 @@ publications:
 1. Figure 8 in publication [3]
 2. Select a set of classes in Table 1 of publication [4]
 3. Figure 2 of publication [5] 
+4. or make yours, however, you have to describe us clearly how you performed the gestures (maybe a Figure too)
+
+After collecting the data, you will proceed with data engineering and preparation methodologies
+in order to transform the data into a suitable format capable of training the AI models. Then, you will
+select between a set of supervised-learning models for the learning procedure (statistical or neural
+networks), and finally you will evaluate the AI models with respect to their performance.
 
 For the data engineering and preparation, it is suggested to follow some of the methodologies that 
 are presented in:
@@ -95,13 +125,12 @@ parameters about the data engineering and the learning processes.
 
 1. Follow the folder and files structure guideline which can be found in `data/README.md`.
 2. Instantiate a `mongod` primary daemon process for the MongoDB system.
-3. Based on the instructions in `aiot_dataset_creation.ipynb`:
+3. Based on the instructions in `01_dataset_creation.ipynb`:
    1. Create the database and the collection you will save your data.
    2. Transform the data in the proper MongoDB's document format.
    3. Upload the data to your collection.
 
-
-**Note**: Use the MongoDB Compass GUI to check your databases and collections:
+Note: Use the MongoDB Compass GUI to check your databases and collections:
 
 * https://www.mongodb.com/products/compass
 
@@ -109,7 +138,11 @@ parameters about the data engineering and the learning processes.
 ## Exploratory Data Analysis and Data Engineering
 
 For the Exploratory Data Analysis (EDA) and the Data Engineering process for both a single instance, and
-the whole dataset, you are prompted to implement and run the following steps:
+the whole dataset, please, follow the instructions in:
+1. `02_single_instance_eda_data_engineering.ipynb`
+2. `03_dataset_eda_data_engineering.ipynb`
+
+According to this step, your are prompted to implement and run the following steps:
 1. Provide a barplot that contains the time-length of the collected instances for each class.
 2. Split the data into fixed windows of X seconds with X% overlap (in samples). 
 3. Provide a barplot with the count of instances that occurred after this process, for each class.
@@ -117,9 +150,6 @@ the whole dataset, you are prompted to implement and run the following steps:
 5. Transform the data into the frequency domain (in the case only of addressing the problem as 2D)
 6. Visualize a time-series instance of the transformed dataset to see the effect of the filter 
 to the signal.
-
-**Note**: Depending on the sensors you will exploit for your project, there is a chance you have to modify either 
-the configuration or some of the functions.
 
 
 ## Data Preparation
@@ -131,8 +161,6 @@ Min Max Normalization)
 3. Perform dimensionality reduction (if needed) by using Principal Component Analysis (PCA)
 4. The data is in proper format to feed the AI model.
 
-**Note**: You can use any of the steps of data engineering or preparation as many times as you wish
-until you achieve the desired results.
 
 ## Learning Process (AI Modeling)
 
@@ -147,22 +175,17 @@ metrics that arise from the True Positives, False Positives, True Negatives, Fal
 
 ## Report
 
-Provide us with:
+You will provide us with:
 * A link in Google Drive or One Drive that contains the collected dataset with its annotated metadata, as well as a 
 max 1 page report related to the data collection procedure, the classes, how the data was annotated, the controlled 
 environment, etc. 
 * The code used to convert the CSV data into a format (data engineering, data preparation), capable of training the 
 models.
-* The configuration file in order for us to run your code based on your settings you chose or created to converge to 
-your optimal solution.
 * The code used to train and evaluate the models. 
 * The code could be in a notebook or in scripting format, however, a `README.md` of how to automatically run the data 
 loading, data processing, model training, and model evaluation process as one should be delivered. 
 * A short report (~1 page) describing the process that you took to convert the data and generate the model. Include 
 your observations on the accuracy of the model regarding the classes’ identification.
-
-**Important Note:** *Feel free to change any part of code in utilities functions or even create your own. However, you have to 
-describe and explain how you decided to proceed with any changes.*
 
 
 ## Bonus
@@ -219,12 +242,8 @@ Marina del Rey, Los Angeles, CA, USA, 2022.
 recognition system using off-the-shelf smartwatch.," in IEEE, 4th International Conference on Big Data Computing and 
 Communications (BIGCOM), 2018. 
 
-[8] Tzamalis, Pantelis., "Python Data Science and Machine Learning Tutorials", [Online]. Available: https://github.com/tzamalisp/data-science-and-machine-learning-tutorials
+[8] Tzamalis, Pantelis, "Python Data Science and Machine Learning Tutorials", [Online]. Available: https://github.com/tzamalisp/data-science-and-machine-learning-tutorials
 
-## Important Notes
-
-* Anouncement date: 26 April, 2024 
-* Delivery Date: DD Month, 2024
 
 ## Contact
 
