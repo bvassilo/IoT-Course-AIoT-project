@@ -5,7 +5,7 @@ import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D  # noqa: F401 unused import
 
 
-def plot_instance_time_domain(df):
+def plot_instance_time_domain(df: pd.DataFrame):
     """Visualizes the movement instance to a plot in time domain.
 
     Args:
@@ -14,17 +14,21 @@ def plot_instance_time_domain(df):
     Returns:
 
     """
-    df.plot(figsize=(20, 10), linewidth=2, fontsize=20)
+    df.plot(figsize=(20, 10), linewidth=2, fontsize=20).legend(fontsize=18)
     plt.xlabel('Sample', fontsize=20)
     plt.ylabel('Axes', fontsize=20)
 
 
-def plot_instance_3d(df, axes_list=("acc_x", "acc_y", "acc_z")):
+def plot_instance_3d(
+        df: pd.DataFrame,
+        axes_list: tuple = ("acc_x", "acc_y", "acc_z")
+):
     """Plots a 3-axes DataFrame in 3D graph.
 
     Args:
         df: The DataFrame to be plotted in 3D.
-        axes_list: Tuple with the 3-axis values. For gyroscope axes should be: ("gyr_x", "gyr_y", "gyr_z")
+        axes_list: Tuple with the 3-axis values. For gyroscope axes should
+            be: ("gyr_x", "gyr_y", "gyr_z")
 
     Returns:
 
@@ -45,14 +49,19 @@ def plot_instance_3d(df, axes_list=("acc_x", "acc_y", "acc_z")):
     ax.set_zlabel(axes_list[2])
 
 
-def plot_np_instance(np_array, columns_list):
-    """Plot NumPy instance using DataFrames (pandas). It first transforms the array into
-    DataFrame with its corresponding columns naming, and then, it plots the DataFrame in
-    time domain.
+def plot_np_instance(
+        np_array: np.ndarray,
+        columns_list: list
+):
+    """Plot NumPy instance using DataFrames (pandas). It first transforms the
+        array into
+    DataFrame with its corresponding columns naming, and then, it plots the
+        DataFrame in time domain.
 
     Args:
         np_array: The NumPy array to be transformed.
-        columns_list: The columns list that the DataFrame and the plot will have.
+        columns_list: The columns list that the DataFrame and the plot will
+            have.
 
     Returns:
 
@@ -63,7 +72,7 @@ def plot_np_instance(np_array, columns_list):
     plt.ylabel('Axes', fontsize=20)
 
 
-def plot_heatmap(df):
+def plot_heatmap(df: pd.DataFrame):
     """Visualizes the heatmap of the DataFrame's values.
 
     Args:
@@ -76,12 +85,17 @@ def plot_heatmap(df):
     sns.heatmap(df, cmap='plasma')
 
 
-def plot_scatter_pca(df, c_name, cmap_set="plasma"):
-    """Visualizes the values of the component columns of the DataFrame according to its column
-    that includes the labels.
+def plot_scatter_pca(
+        df: pd.DataFrame,
+        c_name: str,
+        cmap_set: str = "plasma"
+):
+    """Visualizes the values of the component columns of the DataFrame
+    according to its column that includes the labels.
 
     Args:
-        df: The DataFrame that contains the transformed data after the PCA procedure.
+        df: The DataFrame that contains the transformed data after the PCA
+            procedure.
         c_name: The name of the column that includes the labels.
         cmap_set: The format of the plot.
 
@@ -102,3 +116,5 @@ def plot_scatter_pca(df, c_name, cmap_set="plasma"):
         ax.set_xlabel('First principal component')
         ax.set_ylabel('Second Principal Component')
         ax.set_zlabel('Third Principal Component')
+    else:
+        print("The DataFrame has more than 4 columns.")
