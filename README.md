@@ -215,6 +215,10 @@ Data Science stuff, you can read and experiment with the tutorials that can be f
 
 * [Python Data Science and Machine Learning Tutorials](https://github.com/tzamalisp/data-science-and-machine-learning-tutorials)
 
+**Note:** If you want to write your own functions for the project development, please, keep in mind to write down
+the proper documentation, as well as the docstrings in the same Python Style Format that is included in the project
+announcement.
+
 
 ## References
 
