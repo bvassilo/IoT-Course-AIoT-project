@@ -175,15 +175,19 @@ metrics that arise from the True Positives, False Positives, True Negatives, Fal
 
 ## Report
 
-You will provide us with:
-* A link in Google Drive or One Drive that contains the collected dataset with its annotated metadata, as well as a 
-max 1 page report related to the data collection procedure, the classes, how the data was annotated, the controlled 
-environment, etc. 
+**You will provide us with**:
+* A downloadable Google Drive or One Drive link to the email (tzamalis@ceid.upatras.gr) that contains, the **code** of 
+the project, the collected **dataset** with its annotated metadata, as well as a max **1 page report** related to the 
+data collection procedure, the classes, how the data was annotated, the controlled environment, etc. 
+
+Code Information:
 * The code used to convert the CSV data into a format (data engineering, data preparation), capable of training the 
 models.
 * The code used to train and evaluate the models. 
 * The code could be in a notebook or in scripting format, however, a `README.md` of how to automatically run the data 
 loading, data processing, model training, and model evaluation process as one should be delivered. 
+
+Documentation:
 * A short report (~1 page) describing the process that you took to convert the data and generate the model. Include 
 your observations on the accuracy of the model regarding the classes’ identification.
 
