@@ -4,6 +4,8 @@ import scipy
 import pandas as pd
 import numpy as np
 from sklearn import preprocessing
+import matplotlib.pyplot as plt
+import seaborn as sns
 
 
 def sliding_window_pd(
@@ -128,31 +130,6 @@ def flatten_instances_df(instances_list: list) -> pd.DataFrame:
 
 def df_rebase(
         df: pd.DataFrame,
-        order_list: list,
-        rename_dict: dict
-) -> pd.DataFrame:
-    """Changes the order and name of DataFrame columns to the project's needs
-        for readability.
-
-    Args:
-        df: The pandas DataFrame.
-        order_list: List object that contains the proper order of the default
-            sensor column names.
-        rename_dict: Dictionary object that contains the renaming list based
-            on the project needs.
-
-    Returns:
-        A DataFrame with the new columns order and names.
-    """
-    # keep and re-order only the necessary columns of the initial DataFrame
-    df = df[order_list]
-    print("Initial columns:", df.columns)
-    df = df.rename(columns=rename_dict)  # rename the columns
-
-    return df
-
-def df_rebase(
-        df: pd.DataFrame,
         target_list: list,
         ref_list: list
 ) -> pd.DataFrame:
@@ -175,7 +152,7 @@ def df_rebase(
         pass
 
     else:
-        if len(target_list) == len(ref_list):
+        if len(target_list) == len(ref_list): 
             # keep and re-order only the necessary columns of the initial DataFrame
             df = df[target_list]
             rename_dict = dict(zip(target_list, ref_list))
@@ -188,8 +165,37 @@ def df_rebase(
     return df
 
 
+def rename_df_column_values(
+    np_array: np.ndarray, 
+    y: list, 
+    columns_names: tuple = ("acc_x", "acc_y", "acc_z")
+):
+    """Creates a DataFrame with a "y" label column and replaces the values of the y with the index
+    of the unique values of y.
+
+    Args:
+        np_array: 2D NumPy array.
+        y: List with the y labels
+        columns_names: List with the DF columns names.
+
+    Returns:
+        DataFrame with the multi-axes values and the target labels column.
+    """
+    arr_y = np.array(y)  # list to numpy array
+    unique_values_list = np.unique(arr_y)  # unique list of values
+
+    df = pd.DataFrame(np_array, columns=columns_names)
+    df["y"] = y
+
+    # replace the row item value in the y column of the df, with its index in the unique list
+    for idx, x in enumerate(unique_values_list):
+        df["y"] = np.where(df["y"] == x, idx, df["y"])
+
+    return df
+
+
 def are_lists_equal(
-    list1: list,
+    list1: list, 
     list2: list
 ) -> bool:
     return set(list1) == set(list2)
