@@ -26,7 +26,7 @@ and you will receive a response mail for the date and time when you can get the 
 
 * A team of **2 students** is mandatory for each project
 * Announcement date: **24 April, 2024** 
-* Delivery Date: **20 June, 2024, 11:59PM**
+* Delivery Date: **30 September, 2024, 11:59PM**
 * Grade: **4**, Bonus section: +1
 
 
