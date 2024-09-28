@@ -264,6 +264,6 @@ cython_debug/
 
 *.bson
 *.json
-*.csv
+#*.csv
 /config.yml
 teams_submissions/
