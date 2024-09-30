@@ -71,6 +71,9 @@ def apply_filter(
     Returns:
         NumPy Array with the filtered signal.
     """
+
+    arr = np.asarray(arr, dtype=float)
+
     fbd_filter = scipy.signal.butter(N=order, Wn=wn, btype=filter_type,
                                      output="sos")
     filtered_signal = scipy.signal.sosfiltfilt(sos=fbd_filter, x=arr, padlen=0)
@@ -96,6 +99,7 @@ def filter_instances(
     Returns:
 
     """
+
     filtered_instances_list = list()
     for item in instances_list:
         filtered_instance = item.apply(apply_filter,
@@ -233,3 +237,15 @@ def list_files_in_folder(folder_path) -> list:
                 files_list.append(f)
 
     return files_list
+
+# Function to clean numeric columns
+def clean_numeric_columns(df):
+    for column in df.columns:
+        # Check if the column is of string type
+        if df[column].dtype == 'object':
+            # Convert column to numeric, replacing '.' with empty string for thousands
+            df[column] = pd.to_numeric(df[column].str.replace('.', '', regex=False), errors='coerce')
+        else:
+            # If not a string, convert to numeric directly (handles numeric types)
+            df[column] = pd.to_numeric(df[column], errors='coerce')
+    return df
